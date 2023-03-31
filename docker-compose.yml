@@ -21,7 +21,7 @@ services:
       - db
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=mypapostgresssword
+      - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=mydatabase
       - POSTGRES_HOST=db
   db:
@@ -32,6 +32,7 @@ services:
       - POSTGRES_DB=mydatabase
     volumes:
       - db-data:/var/lib/postgresql/data
-
+    ports:
+    - "5432:5432"
 volumes:
   db-data:
