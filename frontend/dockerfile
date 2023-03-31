@@ -1,0 +1,7 @@
+# Frontend Dockerfile
+WORKDIR ProjectGrassFed/ProjectGrassFed/frontend
+
+# Frontend Dockerfile
+COPY package*.json ./
+RUN npm install
+COPY . .
