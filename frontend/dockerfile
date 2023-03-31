@@ -7,6 +7,8 @@ WORKDIR /ProjectGrassFed/frontend
 
 COPY package*.json ./
 
+RUN apt-get update && \
+    apt-get install -y npm
 
 RUN npm install react react-dom
 
